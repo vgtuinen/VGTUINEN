@@ -3,445 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VG Tuinen</title>
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap">
+  <!-- SEO TITEL -->
+  <title>VG Tuinen | Tuinaanleg en tuinonderhoud Herentals</title>
 
-  <style>
-    :root {
-      --bg: #0f160f;
-      --bg-soft: #162416;
-      --card: #1b2a1b;
-      --text: #eef6ef;
-      --muted: #b8c4b5;
-      --accent: #88a96f;
-      --accent-2: #bec3b1;
-      --line: rgba(255,255,255,0.08);
-      --whatsapp: #25D366;
-      --whatsapp-hover: #1fbd59;
-    }
+  <!-- SEO BESCHRIJVING -->
+  <meta name="description" content="VG Tuinen uit Herentals voor tuinaanleg, tuinonderhoud, snoeiwerken en onkruidbestrijding. Betrouwbare service en een verzorgde afwerking.">
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      background:
-        radial-gradient(circle at top center, rgba(80,110,70,0.18), transparent 40%),
-        linear-gradient(180deg, #0b120b 0%, #0f160f 35%, #101810 100%);
-      color: var(--text);
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* NAV */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      backdrop-filter: blur(8px);
-      background: rgba(15, 22, 15, 0.88);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .nav-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .nav-brand img {
-      height: 44px;
-      width: auto;
-      display: block;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      flex-wrap: wrap;
-    }
-
-    .nav-links a {
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text);
-      opacity: 0.92;
-      transition: opacity 0.2s ease, color 0.2s ease;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent);
-      opacity: 1;
-    }
-
-    /* HERO */
-    header {
-      min-height: calc(100vh - 69px);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px 40px;
-    }
-
-    .hero {
-      max-width: 1180px;
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1.15fr 1fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .hero-copy {
-      max-width: 620px;
-    }
-
-    .hero-kicker {
-      color: var(--accent);
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-size: 12px;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4.4rem);
-      line-height: 1.05;
-      margin: 0 0 16px;
-      letter-spacing: 0.01em;
-    }
-
-    .hero p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: var(--muted);
-      margin: 0 0 28px;
-    }
-
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 600;
-      font-size: 15px;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: #0f160f;
-    }
-
-    .btn-primary:hover {
-      background: #9ab67f;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(136,169,111,0.45);
-      color: var(--text);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .btn-secondary:hover {
-      border-color: rgba(136,169,111,0.8);
-      background: rgba(255,255,255,0.04);
-    }
-
-    .btn-whatsapp {
-      background: var(--whatsapp);
-      color: white;
-    }
-
-    .btn-whatsapp:hover {
-      background: var(--whatsapp-hover);
-    }
-
-    .hero-logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-logo-card {
-      width: 100%;
-      max-width: 480px;
-      background: linear-gradient(180deg, rgba(22,36,22,0.78), rgba(10,18,10,0.94));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 28px;
-      box-shadow: 0 18px 60px rgba(0, 0, 0, 0.32);
-    }
-
-    .hero-logo-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 16px;
-    }
-
-    /* SECTIONS */
-    section {
-      padding: 90px 20px;
-    }
-
-    .container {
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    .section-label {
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      font-size: 12px;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      margin: 0 0 18px;
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-    }
-
-    .section-intro {
-      max-width: 760px;
-      color: var(--muted);
-      line-height: 1.75;
-      margin-bottom: 34px;
-      font-size: 17px;
-    }
-
-    /* SERVICES */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .service-card {
-      background: linear-gradient(180deg, rgba(22,36,22,0.92), rgba(14,22,14,0.96));
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      padding: 24px;
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(136,169,111,0.4);
-    }
-
-    .service-card h3 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      color: var(--accent-2);
-      font-size: 20px;
-    }
-
-    .service-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 15px;
-    }
-
-    /* ABOUT */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 30px;
-      align-items: stretch;
-    }
-
-    .about-panel,
-    .contact-panel {
-      background: linear-gradient(180deg, rgba(22,36,22,0.92), rgba(14,22,14,0.96));
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 28px;
-    }
-
-    .about-panel p {
-      color: var(--muted);
-      line-height: 1.8;
-      margin: 0;
-      font-size: 16px;
-    }
-
-    .usp-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .usp {
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px 18px;
-      color: var(--text);
-      background: rgba(255,255,255,0.02);
-    }
-
-    .usp strong {
-      color: var(--accent);
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
-
-    .contact-panel h3 {
-      margin-top: 0;
-      margin-bottom: 18px;
-      color: var(--accent-2);
-    }
-
-    .contact-list {
-      display: grid;
-      gap: 14px;
-    }
-
-    .contact-item {
-      padding: 14px 16px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(255,255,255,0.02);
-    }
-
-    .contact-item span {
-      display: block;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      margin-bottom: 4px;
-    }
-
-    .contact-item a:hover {
-      color: var(--accent);
-    }
-
-    /* FOOTER */
-    footer {
-      padding: 28px 20px 40px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .footer-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    /* FLOATING WHATSAPP */
-    .floating-whatsapp {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      z-index: 1100;
-      background: var(--whatsapp);
-      color: white;
-      padding: 14px 18px;
-      border-radius: 999px;
-      font-weight: 600;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.28);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .floating-whatsapp:hover {
-      background: var(--whatsapp-hover);
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 980px) {
-      .hero,
-      .about-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .hero {
-        gap: 28px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .nav-inner {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .nav-links {
-        gap: 14px;
-      }
-
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        padding-top: 30px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-
-      .floating-whatsapp {
-        right: 14px;
-        bottom: 14px;
-        padding: 12px 16px;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <nav>
     <div class="nav-inner">
       <div class="nav-brand">
-        <img src="compactlogo.png" alt="VG Tuinen compact logo">
+        <img src="compactlogo.png" alt="VG Tuinen logo">
       </div>
       <div class="nav-links">
         <a href="#diensten">Diensten</a>
@@ -455,14 +35,28 @@
     <div class="hero">
       <div class="hero-copy">
         <div class="hero-kicker">VG Tuinen • Sterk in groen</div>
+
         <h1>Tuinaanleg en onderhoud met oog voor detail</h1>
+
+        <!-- SEO TEKST -->
         <p>
-          VG Tuinen uit Herentals staat voor verzorgd groen, betrouwbare service en een nette afwerking.
-          Van periodiek tuinonderhoud tot aanleg van een nieuwe tuin: elke opdracht wordt met zorg uitgevoerd.
+          VG Tuinen uit Herentals is gespecialiseerd in tuinaanleg en tuinonderhoud.
+          Wij verzorgen snoeiwerken en onkruidbestrijding voor particulieren in Herentals
+          en omliggende gemeenten.
+
+          Van periodiek tuinonderhoud tot aanleg van een nieuwe tuin:
+          elke opdracht wordt uitgevoerd met oog voor detail, betrouwbaarheid en kwaliteit.
         </p>
+
         <div class="hero-actions">
           <a class="btn btn-primary" href="tel:+32499769752">Bel nu</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud." target="_blank" rel="noopener">WhatsApp</a>
+
+          <a class="btn btn-whatsapp"
+             href="https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud."
+             target="_blank">
+             WhatsApp
+          </a>
+
           <a class="btn btn-secondary" href="mailto:info@vgtuinen.be">Vraag een offerte</a>
         </div>
       </div>
@@ -479,24 +73,21 @@
     <div class="container">
       <div class="section-label">Diensten</div>
       <h2>Waarvoor kan je bij VG Tuinen terecht?</h2>
-      <p class="section-intro">
-        Praktisch, verzorgd en professioneel uitgevoerd tuinwerk in regio Herentals.
-      </p>
 
       <div class="services-grid">
         <div class="service-card">
           <h3>Tuinaanleg</h3>
-          <p>Aanleg van nieuwe tuinen, graszones, beplanting en de algemene opbouw van een verzorgde buitenruimte.</p>
+          <p>Professionele tuinaanleg in Herentals en omgeving.</p>
         </div>
 
         <div class="service-card">
           <h3>Tuinonderhoud</h3>
-          <p>Periodiek of eenmalig onderhoud, zodat je tuin er het hele jaar door netjes en gezond bij ligt.</p>
+          <p>Periodiek en eenmalig tuinonderhoud in Herentals.</p>
         </div>
 
         <div class="service-card">
           <h3>Snoeiwerken</h3>
-          <p>Snoeien van hagen, struiken en kleinere bomen met aandacht voor vorm, groei en een proper eindresultaat.</p>
+          <p>Snoeien van hagen en struiken met oog voor groei en vorm.</p>
         </div>
 
         <div class="service-card">
@@ -515,28 +106,19 @@
       <div class="about-grid">
         <div class="about-panel">
           <p>
-            VG Tuinen is een eenmanszaak in bijberoep, actief in Herentals en omgeving.
-            De focus ligt op kwalitatieve tuinaanleg en onderhoud, met een verzorgde uitvoering en duidelijke communicatie.
+            VG Tuinen is een eenmanszaak in bijberoep, actief in Herentals,
+            Grobbendonk, Olen en omliggende gemeenten.
+
+            Wij staan in voor tuinaanleg, tuinonderhoud, snoeiwerken en
+            onkruidbestrijding met een professionele en praktische aanpak.
           </p>
         </div>
 
         <div class="usp-list">
-          <div class="usp">
-            <strong>Professioneel</strong>
-            Correcte afspraken en verzorgd werk.
-          </div>
-          <div class="usp">
-            <strong>Betrouwbaar</strong>
-            Duidelijke communicatie en een praktische aanpak.
-          </div>
-          <div class="usp">
-            <strong>Netjes</strong>
-            Oog voor afwerking en voor een proper resultaat.
-          </div>
-          <div class="usp">
-            <strong>Met oog voor detail</strong>
-            Kleine details maken een groot verschil in een tuin.
-          </div>
+          <div class="usp"><strong>Professioneel</strong> Correcte afspraken</div>
+          <div class="usp"><strong>Betrouwbaar</strong> Duidelijke communicatie</div>
+          <div class="usp"><strong>Netjes</strong> Verzorgde afwerking</div>
+          <div class="usp"><strong>Detail</strong> Oog voor kwaliteit</div>
         </div>
       </div>
     </div>
@@ -545,36 +127,25 @@
   <section id="contact">
     <div class="container">
       <div class="section-label">Contact</div>
-      <h2>Vraag vrijblijvend informatie of een offerte aan</h2>
+      <h2>Contacteer ons</h2>
 
       <div class="contact-grid">
         <div class="contact-panel">
-          <h3>Bedrijfsgegevens</h3>
+          <h3>Gegevens</h3>
           <div class="contact-list">
-            <div class="contact-item">
-              <span>Bedrijf</span>
-              VG Tuinen
-            </div>
-            <div class="contact-item">
-              <span>Locatie</span>
-              Herentals
-            </div>
-            <div class="contact-item">
-              <span>BTW</span>
-              BE 1038.725.785
-            </div>
+            <div class="contact-item">VG Tuinen</div>
+            <div class="contact-item">Herentals</div>
+            <div class="contact-item">BE 1038.725.785</div>
           </div>
         </div>
 
         <div class="contact-panel">
-          <h3>Contactgegevens</h3>
+          <h3>Contact</h3>
           <div class="contact-list">
             <div class="contact-item">
-              <span>Telefoon</span>
               <a href="tel:+32499769752">0499 76 97 52</a>
             </div>
             <div class="contact-item">
-              <span>E-mail</span>
               <a href="mailto:info@vgtuinen.be">info@vgtuinen.be</a>
             </div>
           </div>
@@ -583,20 +154,19 @@
     </div>
   </section>
 
+  <!-- FLOATING BUTTON -->
+  <a class="floating-whatsapp"
+     href="https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud."
+     target="_blank">
+     WhatsApp
+  </a>
+
   <footer>
     <div class="footer-inner">
       <div>© 2026 VG Tuinen</div>
-      <div>Sterk in groen</div>
+      <div>Herentals</div>
     </div>
   </footer>
 
-  <a class="floating-whatsapp"
-     href="https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud."
-     target="_blank"
-     rel="noopener">
-    WhatsApp
-  </a>
-
 </body>
 </html>
-
