@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VG Tuinen</title>
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap">
-
+  https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap
   <style>
     :root {
       --bg: #0f160f;
@@ -17,6 +15,8 @@
       --accent: #88a96f;
       --accent-2: #bec3b1;
       --line: rgba(255,255,255,0.08);
+      --whatsapp: #25D366;
+      --whatsapp-hover: #1fbd59;
     }
 
     * {
@@ -41,7 +41,6 @@
       text-decoration: none;
     }
 
-    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -59,13 +58,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      min-width: 0;
     }
 
     .nav-brand img {
@@ -93,7 +85,6 @@
       opacity: 1;
     }
 
-    /* HERO */
     header {
       min-height: calc(100vh - 69px);
       display: flex;
@@ -176,6 +167,15 @@
       background: rgba(255,255,255,0.04);
     }
 
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: #fff;
+    }
+
+    .btn-whatsapp:hover {
+      background: var(--whatsapp-hover);
+    }
+
     .hero-logo {
       display: flex;
       justify-content: center;
@@ -199,7 +199,6 @@
       border-radius: 16px;
     }
 
-    /* GENERAL SECTIONS */
     section {
       padding: 90px 20px;
     }
@@ -230,7 +229,6 @@
       font-size: 17px;
     }
 
-    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -264,7 +262,6 @@
       font-size: 15px;
     }
 
-    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -306,7 +303,6 @@
       margin-bottom: 4px;
     }
 
-    /* CONTACT */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -344,7 +340,6 @@
       color: var(--accent);
     }
 
-    /* FOOTER */
     footer {
       padding: 28px 20px 40px;
       border-top: 1px solid var(--line);
@@ -361,7 +356,24 @@
       flex-wrap: wrap;
     }
 
-    /* RESPONSIVE */
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1100;
+      background: var(--whatsapp);
+      color: white;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.28);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .floating-whatsapp:hover {
+      background: var(--whatsapp-hover);
+    }
+
     @media (max-width: 980px) {
       .hero,
       .about-grid,
@@ -404,21 +416,25 @@
         width: 100%;
         text-align: center;
       }
+
+      .floating-whatsapp {
+        right: 14px;
+        bottom: 14px;
+        padding: 12px 16px;
+      }
     }
   </style>
 </head>
 <body>
-
   <nav>
     <div class="nav-inner">
       <div class="nav-brand">
-        <img src="compactlogo.png" alt="VG Tuinen compact logo">
+        compactlogo.png
       </div>
-
       <div class="nav-links">
-        <a href="#diensten">Diensten</a>
-        <a href="#over">Over ons</a>
-        <a href="#contact">Contact</a>
+        #dienstenDiensten</a>
+        #overOver ons</a>
+        #contactContact</a>
       </div>
     </div>
   </nav>
@@ -432,16 +448,16 @@
           VG Tuinen uit Herentals staat voor verzorgd groen, betrouwbare service en een nette afwerking.
           Van periodiek tuinonderhoud tot aanleg van een nieuwe tuin: elke opdracht wordt met zorg uitgevoerd.
         </p>
-
         <div class="hero-actions">
-          <a class="btn btn-primary" href="tel:+32499769752">Bel nu</a>
-          <a class="btn btn-secondary" href="mailto:vgtuinen.be@gmail.com">Vraag een offerte</a>
+          tel:+32499769752Bel nu</a>
+          https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud.WhatsApp</a>
+          <a class="btn btn-secondary" href="mailto:info@vgtuinen.be">Vraag een offerte</a>
         </div>
       </div>
 
       <div class="hero-logo">
         <div class="hero-logo-card">
-          <img src="hoofdlogo.png" alt="VG Tuinen hoofdlogo">
+          hoofdlogo.png
         </div>
       </div>
     </div>
@@ -453,36 +469,27 @@
       <h2>Waarvoor kan je bij VG Tuinen terecht?</h2>
       <p class="section-intro">
         Praktisch, verzorgd en professioneel uitgevoerd tuinwerk in regio Herentals.
-        Heb je een specifieke vraag? Dan kan deze sectie later nog uitgebreid worden met extra diensten of foto’s van realisaties.
       </p>
 
       <div class="services-grid">
         <div class="service-card">
           <h3>Tuinaanleg</h3>
-          <p>
-            Aanleg van nieuwe tuinen, graszones, beplanting en de algemene opbouw van een verzorgde buitenruimte.
-          </p>
+          <p>Aanleg van nieuwe tuinen, graszones, beplanting en de algemene opbouw van een verzorgde buitenruimte.</p>
         </div>
 
         <div class="service-card">
           <h3>Tuinonderhoud</h3>
-          <p>
-            Periodiek of eenmalig onderhoud, zodat je tuin er het hele jaar door netjes en gezond bij ligt.
-          </p>
+          <p>Periodiek of eenmalig onderhoud, zodat je tuin er het hele jaar door netjes en gezond bij ligt.</p>
         </div>
 
         <div class="service-card">
           <h3>Snoeiwerken</h3>
-          <p>
-            Snoeien van hagen, struiken en kleinere bomen met aandacht voor vorm, groei en een proper eindresultaat.
-          </p>
+          <p>Snoeien van hagen, struiken en kleinere bomen met aandacht voor vorm, groei en een proper eindresultaat.</p>
         </div>
 
         <div class="service-card">
-          <h3>Seizoensonderhoud</h3>
-          <p>
-            Voorjaars- en najaarswerken, opruimen, verzorgen en klaarmaken van de tuin voor elk seizoen.
-          </p>
+          <h3>Onkruidbestrijding</h3>
+          <p>Professionele onkruidbestrijding met fytolicentie.</p>
         </div>
       </div>
     </div>
@@ -498,7 +505,6 @@
           <p>
             VG Tuinen is een eenmanszaak in bijberoep, actief in Herentals en omgeving.
             De focus ligt op kwalitatieve tuinaanleg en onderhoud, met een verzorgde uitvoering en duidelijke communicatie.
-            Elke tuin verdient een aanpak op maat — van kleine onderhoudswerken tot grotere ingrepen.
           </p>
         </div>
 
@@ -553,7 +559,7 @@
           <div class="contact-list">
             <div class="contact-item">
               <span>Telefoon</span>
-              <a href="tel:+32499769752">0499 76 97 52</a>
+              tel:+324997697520499 76 97 52</a>
             </div>
             <div class="contact-item">
               <span>E-mail</span>
@@ -572,5 +578,8 @@
     </div>
   </footer>
 
+  https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud.
+    WhatsApp
+  </a>
 </body>
 </html>
