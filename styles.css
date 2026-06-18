@@ -16,7 +16,6 @@ nav {
     justify-content: center;
     gap: 30px;
     padding: 15px;
-    z-index: 1000;
 }
 
 nav img {
@@ -26,18 +25,24 @@ nav img {
 nav a {
     color: #E6EFE8;
     text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #88A96F;
 }
 
 /* HEADER */
 header {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 60px;
 }
 
 header img {
-    width: 300px;
+    width: 280px;
 }
 
 /* SECTIONS */
@@ -49,24 +54,33 @@ section {
 
 h2 {
     color: #88A96F;
+    text-align: center;
 }
 
 /* SERVICES */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .card {
     background: #162416;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* CONTACT */
 .contact {
     text-align: center;
+    line-height: 1.6;
 }
 
 /* FOOTER */
@@ -74,6 +88,7 @@ footer {
     text-align: center;
     padding: 20px;
     border-top: 1px solid #2a3a2a;
+    margin-top: 40px;
 }
 
 /* WHATSAPP BUTTON */
@@ -83,8 +98,26 @@ footer {
     right: 20px;
     background: #25D366;
     color: white;
-    padding: 15px 20px;
+    padding: 15px 18px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
+
+.whatsapp:hover {
+    transform: scale(1.05);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header img {
+        width: 220px;
+    }
+}
+
