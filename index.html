@@ -4,7 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VG Tuinen</title>
-  https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap">
+
   <style>
     :root {
       --bg: #0f160f;
@@ -41,6 +43,7 @@
       text-decoration: none;
     }
 
+    /* NAV */
     nav {
       position: sticky;
       top: 0;
@@ -85,6 +88,7 @@
       opacity: 1;
     }
 
+    /* HERO */
     header {
       min-height: calc(100vh - 69px);
       display: flex;
@@ -169,7 +173,7 @@
 
     .btn-whatsapp {
       background: var(--whatsapp);
-      color: #fff;
+      color: white;
     }
 
     .btn-whatsapp:hover {
@@ -199,6 +203,7 @@
       border-radius: 16px;
     }
 
+    /* SECTIONS */
     section {
       padding: 90px 20px;
     }
@@ -229,6 +234,7 @@
       font-size: 17px;
     }
 
+    /* SERVICES */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -262,6 +268,7 @@
       font-size: 15px;
     }
 
+    /* ABOUT */
     .about-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -303,6 +310,7 @@
       margin-bottom: 4px;
     }
 
+    /* CONTACT */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -340,6 +348,7 @@
       color: var(--accent);
     }
 
+    /* FOOTER */
     footer {
       padding: 28px 20px 40px;
       border-top: 1px solid var(--line);
@@ -356,6 +365,7 @@
       flex-wrap: wrap;
     }
 
+    /* FLOATING WHATSAPP */
     .floating-whatsapp {
       position: fixed;
       right: 20px;
@@ -374,6 +384,7 @@
       background: var(--whatsapp-hover);
     }
 
+    /* RESPONSIVE */
     @media (max-width: 980px) {
       .hero,
       .about-grid,
@@ -426,15 +437,16 @@
   </style>
 </head>
 <body>
+
   <nav>
     <div class="nav-inner">
       <div class="nav-brand">
-        compactlogo.png
+        <img src="compactlogo.png" alt="VG Tuinen compact logo">
       </div>
       <div class="nav-links">
-        #dienstenDiensten</a>
-        #overOver ons</a>
-        #contactContact</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#over">Over ons</a>
+        <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -449,15 +461,15 @@
           Van periodiek tuinonderhoud tot aanleg van een nieuwe tuin: elke opdracht wordt met zorg uitgevoerd.
         </p>
         <div class="hero-actions">
-          tel:+32499769752Bel nu</a>
-          https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud.WhatsApp</a>
+          <a class="btn btn-primary" href="tel:+32499769752">Bel nu</a>
+          <a class="btn btn-whatsapp" href="https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud." target="_blank" rel="noopener">WhatsApp</a>
           <a class="btn btn-secondary" href="mailto:info@vgtuinen.be">Vraag een offerte</a>
         </div>
       </div>
 
       <div class="hero-logo">
         <div class="hero-logo-card">
-          hoofdlogo.png
+          <img src="hoofdlogo.png" alt="VG Tuinen hoofdlogo">
         </div>
       </div>
     </div>
@@ -559,7 +571,7 @@
           <div class="contact-list">
             <div class="contact-item">
               <span>Telefoon</span>
-              tel:+324997697520499 76 97 52</a>
+              <a href="tel:+32499769752">0499 76 97 52</a>
             </div>
             <div class="contact-item">
               <span>E-mail</span>
@@ -578,8 +590,13 @@
     </div>
   </footer>
 
-  https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud.
+  <a class="floating-whatsapp"
+     href="https://wa.me/32499769752?text=Hallo%2C%20ik%20wens%20graag%20meer%20info%20over%20tuinaanleg%20of%20tuinonderhoud."
+     target="_blank"
+     rel="noopener">
     WhatsApp
   </a>
+
 </body>
 </html>
+
